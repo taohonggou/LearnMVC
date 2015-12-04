@@ -13,15 +13,17 @@
     <title>ListView</title>
 </head>
 <body>
-    <b>Hello </b>@*@Model.UserName*@
+    <a href="/Employee/AddNew">Add New</a>
     <table>
         <tr>
-            <th>Employee Name</th><th>Salary</th>
+            <th>Employee Name</th>
+            <th>Salary</th>
         </tr>
         @foreach (EmployeeViewModel item in @Model.Employees)
         {
             <tr>
-                <td>@item.EmployeeName</td><td style="background-color:@item.SalaryColor">@item.Salary</td>
+                <td>@item.EmployeeName</td>
+                <td style="background-color:@item.SalaryColor">@item.Salary</td>
             </tr>
         }
     </table>
